@@ -46,6 +46,7 @@ public class ContentCoordinatorLayoutBehaviour extends CoordinatorLayout.Behavio
             animator.setDuration(500);
             animator.start();
             flag = false;
+            dyTotal=0;
         }
         if (dy < 0 && !flag && MainActivity.getFirstVisibleItemPosition() == 0 && dyTotal < -80) {
             ValueAnimator animator = ValueAnimator.ofInt(Dp2Px(child.getContext(), 0), childHeight);
@@ -61,6 +62,7 @@ public class ContentCoordinatorLayoutBehaviour extends CoordinatorLayout.Behavio
             animator.setDuration(500);
             animator.start();
             flag = true;
+            dyTotal = 0;
         }
     }
 
